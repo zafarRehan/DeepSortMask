@@ -13,10 +13,10 @@ Tracking in DeepSort is
 This repository will guide you through tracking objects with masks produced by default MaskRCNN in Detectron2 framework.
 You can train your custom MaskRCNN using Detectron2 easily following this tutorial:
 
-Video 1: https://www.youtube.com/watch?v=ffTURA0JM1Q
+Video 1: https://www.youtube.com/watch?v=ffTURA0JM1Q <br/>
 Video2: https://www.youtube.com/watch?v=GoItxr16ae8&t=357s
 
-Also here is another helpful repo: https://github.com/joheras/CLoDSA which will help with augmenting images with masks, in case you have limmited training data, thats what I used too.
+Also here is another helpful repo: https://github.com/joheras/CLoDSA which will help with augmenting images with masks, in case you have limited training data, thats what I used too.
 
 
 ## Usage
@@ -26,4 +26,10 @@ The file mask_tracker.py is the one that takes care of everything and the detail
 
 
 ## Performance 
+
+### Input
+Input videos are there in <a href="/data/video/">/data/video/</a>
+
+
+### Output
 
