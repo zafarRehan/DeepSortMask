@@ -34,6 +34,17 @@ Input videos are there in <a href="/data/video/">/data/video/</a>
 
 
 ### Output
-<a href="https://drive.google.com/file/d/1Gf8NUKqZJ2PN4hhAEPdQ-oQ2PPK8lN0v/view?usp=share_link"><img src="/cars.png" width=500></a>
+<a href="https://drive.google.com/file/d/1Gf8NUKqZJ2PN4hhAEPdQ-oQ2PPK8lN0v/view?usp=share_link"><img src="/cars.png" width=600></a>
+<br/><br/><br/>
+<a href="https://drive.google.com/file/d/1fP_wjmwxBWg1R6Ij7QHbaL4aHFvn83es/view?usp=share_link"><img src="/public.png" width=600></a>
 
-<a href="https://drive.google.com/file/d/1fP_wjmwxBWg1R6Ij7QHbaL4aHFvn83es/view?usp=share_link"><img src="/public.png" width=500></a>
+
+
+## Conclusion
+
+This repo guides you with tracking masked objects using Detectron2 MaskRCNN in detail. This same method can be used to track other model's Object Detections or Segmentations in different architectures too, some tweaks would be needed, try to figure it out and if some help is needed can raise an Issue or connect with me on linkedIn https://www.linkedin.com/in/rehan-zafar-48797b193/
+
+If this repository helped you in anyway please give it a star.
+
+Thanks,
+REHAN ZAFAR
