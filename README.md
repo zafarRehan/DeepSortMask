@@ -16,9 +16,7 @@ You can train your custom MaskRCNN using Detectron2 easily following this tutori
 Video 1: https://www.youtube.com/watch?v=ffTURA0JM1Q <br/>
 Video2: https://www.youtube.com/watch?v=GoItxr16ae8&t=357s
 
-Also here is another helpful repo: https://github.com/joheras/CLoDSA which will help wit
-
-<a href="https://drive.google.com/file/d/1vnYodDGbuvfJbauj41aEfubLoCDUaXh_/view?usp=sharing"><img src="/screen.png" width=500></a>h augmenting images with masks, in case you have limited training data, thats what I used too.
+Also here is another helpful repo: https://github.com/joheras/CLoDSA which will help with augmenting images with masks, in case you have limited training data, thats what I used too.
 
 
 ## Usage
@@ -34,9 +32,9 @@ Input videos are there in <a href="/data/video/">/data/video/</a>
 
 
 ### Output
-<a href="https://drive.google.com/file/d/1Gf8NUKqZJ2PN4hhAEPdQ-oQ2PPK8lN0v/view?usp=share_link"><img src="/cars.png" width=600></a>
+<a href="https://drive.google.com/file/d/1Gf8NUKqZJ2PN4hhAEPdQ-oQ2PPK8lN0v/view?usp=share_link"><img src="/cars.png" width=800></a>
 <br/><br/><br/>
-<a href="https://drive.google.com/file/d/1fP_wjmwxBWg1R6Ij7QHbaL4aHFvn83es/view?usp=share_link"><img src="/public.png" width=600></a>
+<a href="https://drive.google.com/file/d/1fP_wjmwxBWg1R6Ij7QHbaL4aHFvn83es/view?usp=share_link"><img src="/public.png" width=800></a>
 
 
 
