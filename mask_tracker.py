@@ -55,6 +55,8 @@ flags.DEFINE_string('f', '', '')
 flags.DEFINE_string('video', '', 'path to input video or set to 0 for webcam')
 flags.DEFINE_string('output', '', 'path to output video')
 flags.DEFINE_string('log_details', 'false', 'should log details to console or not. (true or false)')
+flags.DEFINE_string('info_panel', 'true', 'should log details to information panel at top left corner or not. (true or false).\
+                                 Slows down drawing process to some extent')
 
 def main(_argv):
 
@@ -231,20 +233,20 @@ def main(_argv):
 
         white_rect = np.ones((h, w, 3), dtype=np.uint8) * 0
         
-
-        """
-        write text over the upper-left corner box which will later be merged to current frame after 
-        drwaing the masks and boxes over it [number of objects is written once per frame]
-        """
-        cv2.putText(
-            img = white_rect,
-            text = "TRACKED OBJECTS: " + str(count),
-            org = (20, 30),
-            fontFace = cv2.FONT_HERSHEY_PLAIN,
-            fontScale = 1.4,
-            color = (255, 255, 255),
-            thickness = 1
-          )
+        if FLAGS.info_panel == 'true':
+            """
+            write text over the upper-left corner box which will later be merged to current frame after 
+            drwaing the masks and boxes over it [number of objects is written once per frame]
+            """
+            cv2.putText(
+                img = white_rect,
+                text = "TRACKED OBJECTS: " + str(count),
+                org = (20, 30),
+                fontFace = cv2.FONT_HERSHEY_PLAIN,
+                fontScale = 1.4,
+                color = (255, 255, 255),
+                thickness = 1
+            )
 
 
         frame_masks = []
@@ -274,22 +276,23 @@ def main(_argv):
             frame_labels.append('id_' + str(track.track_id) + ' ' + class_name + ' ' + str(score))
             frame_colors.append(color)
 
+            
+            if FLAGS.info_panel == 'true':
+                """
+                write text over the upper-left corner box which will later be merged to current frame after 
+                drwaing the masks and boxes over it [info is written n_objects per frame]
+                """
+                cv2.putText(
+                    img = white_rect,
+                    text = 'ID: ' + str(track.track_id) + '  ' + class_name + '  ' +  str([int(bbox[0]), int(bbox[1]), int(bbox[2]), int(bbox[3])]),
+                    org = (20, 60 + (idx * 20)),
+                    fontFace = cv2.FONT_HERSHEY_PLAIN,
+                    fontScale = 1,
+                    color = (color[2]*255, color[1]*255, color[0]*255),
+                    thickness = 1
+                )
+                idx += 1
 
-            """
-            write text over the upper-left corner box which will later be merged to current frame after 
-            drwaing the masks and boxes over it [info is written n_objects per frame]
-            """
-            cv2.putText(
-                  img = white_rect,
-                  text = 'ID: ' + str(track.track_id) + '  ' + class_name + '  ' +  str([int(bbox[0]), int(bbox[1]), int(bbox[2]), int(bbox[3])]),
-                  org = (20, 60 + (idx * 20)),
-                  fontFace = cv2.FONT_HERSHEY_PLAIN,
-                  fontScale = 1,
-                  color = (color[2]*255, color[1]*255, color[0]*255),
-                  thickness = 1
-              )
-
-            idx += 1
 
             """ if enabled log-details flag then print details about each track """
             if FLAGS.log_details == 'true':
@@ -323,14 +326,15 @@ def main(_argv):
         fps = 1.0 / (time.time() - start_time)
         print("FPS: %.2f" % fps)
 
-        
-        """
-        merge the resultant frame with the top left corner info panel
-        with some transparency 
-        """
-        sub_img = result[y:y+h, x:x+w]
-        res = cv2.addWeighted(sub_img, 0.2, white_rect, 0.8, 1.0)
-        result[y:y+h, x:x+w] = res
+        if FLAGS.info_panel == 'true':
+            """
+            merge the resultant frame with the top left corner info panel
+            with some transparency 
+            """
+            sub_img = result[y:y+h, x:x+w]
+            res = cv2.addWeighted(sub_img, 0.2, white_rect, 0.8, 1.0)
+            result[y:y+h, x:x+w] = res
+            
         out.write(result)         # save video file
 
     cv2.destroyAllWindows()
