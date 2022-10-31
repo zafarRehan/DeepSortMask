@@ -22,7 +22,7 @@ Also here is another helpful repo: https://github.com/joheras/CLoDSA which will 
 ## Usage
 
 Open the <a href="maskRCNN_tracking.ipynb">Notebook</a> given in this repo in Google Colab and run it following the instructions there, it's preety straightforward.
-The file mask_tracker.py is the one that takes care of everything and the details of the codes are properly documented in the code, please follow it for clarification.
+The file <a href="mask_tracker.py">mask_tracker.py</a> is the one that takes care of everything and the details of the codes are properly documented in the code, please follow it for clarification.
 
 
 ## Performance 
