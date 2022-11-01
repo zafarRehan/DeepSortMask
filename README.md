@@ -5,7 +5,6 @@ Recently I had a task which required tracking detections along with it's mask. I
 Then I found this repository: https://github.com/theAIGuysCode/yolov4-deepsort
 Actually for object detecion there were many resources for tracking, so I chose the above one and decided to change it to tracking objects along with masks.
 
-Tracking in DeepSort is 
 
 
 ## What exactly it will do?
@@ -44,5 +43,5 @@ This repo guides you with tracking masked objects using Detectron2 MaskRCNN in d
 
 If this repository helped you in anyway please give it a star.
 
-Thanks,
+Thanks,</br>
 REHAN ZAFAR
