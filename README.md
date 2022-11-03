@@ -39,7 +39,7 @@ Input videos are there in <a href="/data/video/">/data/video/</a>
 
 ## Conclusion
 
-This repo guides you with tracking masked objects using Detectron2 MaskRCNN in detail. This same method can be used to track other model's Object Detections or Segmentations in different architectures too, some tweaks would be needed, try to figure it out and if some help is needed can raise an Issue or connect with me on linkedIn https://www.linkedin.com/in/rehan-zafar-48797b193/
+This repo guides you with tracking masked objects using Detectron2 MaskRCNN in detail. This same method can be used to track other Object Detection or Segmentation models built in different frameworks too, some tweaks would be needed, try to figure it out and if some help is needed can raise an Issue or connect with me on linkedIn https://www.linkedin.com/in/rehan-zafar-48797b193/
 
 If this repository helped you in anyway please give it a star.
 
